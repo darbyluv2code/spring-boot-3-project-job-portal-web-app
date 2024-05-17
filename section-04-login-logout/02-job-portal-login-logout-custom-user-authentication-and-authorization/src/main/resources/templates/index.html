@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Login HotDev Jobs</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css} "/>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/font-awesome.min.css}"/>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/styles.css}"/>
+    <meta charset="ISO-8859-1">
+</head>
+<body class="background">
+<nav class="main_div">
+    <div class="logo_left">
+        <label class="logo">
+            hotdevjobs
+        </label>
+        <label class="logo_com">
+            .com
+        </label>
+    </div>
+    <div class="logo_right">
+        <label class="Candidate_login_btn">
+            <a th:href="@{/login}">
+                Job Candidate Login
+            </a>
+            <a th:href="@{/register}">
+                /Register
+            </a>
+        </label>
+        <label class="Recruiter_login_btn">
+            <a th:href="@{/login}">
+                Recruiter Login
+            </a>
+            <a th:href="@{/register}">
+                /Register
+            </a>
+
+        </label>
+    </div>
+</nav>
+<form th:action="@{/global-search/}">
+    <div class="searchBox">
+        <div class="inner">
+
+            <input type="text" placeholder="Search for a job" name="job" th:value="${job}"/>
+            <input type="text" placeholder="Enter a location" name="location" th:value="${location}"/>
+            <button type="submit"><i class="fa fa-search"></i></button>
+
+        </div>
+    </div>
+</form>
+<footer>
+    <label class="copy-right">Copyright © hotdevjobs.com</label>
+</footer>
+</body>
+
+<script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link
+            th:rel="stylesheet"
+            th:href="@{/webjars/bootstrap/css/bootstrap.min.css} "
+    />
+    <link
+            rel="stylesheet"
+            type="text/css"
+            media="all"
+            th:href="@{/css/font-awesome.min.css}"
+    />
+    <link
+            rel="stylesheet"
+            type="text/css"
+            media="all"
+            th:href="@{/css/styles.css}"
+    />
+    <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+    />
+    <meta charset="ISO-8859-1"/>
+    <title>Sign Up</title>
+</head>
+
+<body>
+<section class="content hidden-overflow">
+    <div class="row">
+        <div class="col-6 coffee_mug_background">
+            <div class="logo_left mt-3 pt-4 ms-5 pl-5">
+                <h2 class="logo" style="color: white">
+                    hotdevjobs <span class="logo_com">.com</span>
+                </h2>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="top-margin">
+                <div>
+                    <div class="d-flex justify-content-center mb-4">
+                        <h1 class="heading_font font-weight-bold">
+                            Create User Account
+                        </h1>
+                    </div>
+                    <div class="myForm">
+                        <form
+                                th:action="@{/register/new}"
+                                th:object="${user}"
+                                method="post"
+                        >
+                            <div class="box-body bozero mx2p">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input
+                                                    placeholder="Email"
+                                                    name="email"
+                                                    th:field="*{email}"
+                                                    type="email"
+                                                    style="width: 100%"
+                                                    class="form-control"
+                                                    required
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input
+                                                    min="8"
+                                                    placeholder="Password"
+                                                    name="password"
+                                                    th:field="*{password}"
+                                                    type="password"
+                                                    class="form-control pwd"
+                                                    required
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <select
+                                                required
+                                                class="form-control"
+                                                th:field="*{userTypeId}"
+                                        >
+                                            <th:block th:each="userType :${getAllTypes}">
+                                                <option
+                                                        th:text="${userType.userTypeName}"
+                                                        th:value="${userType.userTypeId}"
+                                                ></option>
+                                            </th:block>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-footer">
+                                <div class="row">
+                                    <div class="form-group mt-5 col-md-12">
+                                        <button type="submit" class="myBtn py-3">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+
+<script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+</html>
