@@ -6,4 +6,4 @@ If you have questions or need tech support, post your questions to the [classroo
 
 Happy coding!
 
-[<img src="images/city-skyline-small.png">](http://www.luv2code.com/spring-boot-3-project-job-portal-web-app-github)
+[<img src="images/spring-boot-job-portal-project.png">](http://www.luv2code.com/spring-boot-3-project-job-portal-web-app-github)
