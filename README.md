@@ -8,7 +8,7 @@ Happy coding!
 
 [<img src="images/spring-boot-job-portal-project.png">](http://www.luv2code.com/spring-boot-3-project-job-portal-web-app-github)
 
-## Spring Boot Road Map
+## Spring Boot Road Map - Learning Path
 
 Here is a Spring Boot Learning Path and Roadmap to help you learn more about Spring Boot. These are links to luv2code courses on Udemy. You can purchase the courses to further your studies.
 
