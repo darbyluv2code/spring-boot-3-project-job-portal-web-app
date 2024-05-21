@@ -18,7 +18,7 @@ import javax.swing.*;
 public class WebSecurityConfig {
 
     private final CustomUserDetailsService customUserDetailsService;
-    private final CustomAuthenticationSuccessHandler customAuthenticationSuccessHandler
+    private final CustomAuthenticationSuccessHandler customAuthenticationSuccessHandler;
     @Autowired
     public WebSecurityConfig(CustomUserDetailsService customUserDetailsService, CustomAuthenticationSuccessHandler customAuthenticationSuccessHandler) {
         this.customUserDetailsService = customUserDetailsService;
