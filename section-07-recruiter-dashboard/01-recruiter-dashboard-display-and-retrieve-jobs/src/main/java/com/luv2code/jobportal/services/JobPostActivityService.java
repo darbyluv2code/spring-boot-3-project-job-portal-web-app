@@ -1,6 +1,7 @@
 package com.luv2code.jobportal.services;
 
 import com.luv2code.jobportal.entity.JobPostActivity;
+import com.luv2code.jobportal.entity.RecruiterJobsDto;
 import com.luv2code.jobportal.repository.JobPostActivityRepository;
 import org.springframework.stereotype.Service;
 
@@ -17,4 +18,7 @@ public class JobPostActivityService {
         return jobPostActivityRepository.save(jobPostActivity);
     }
 
+    public List<RecruiterJobsDto> getRecruiterJobs(int recruiter) {
+
+    }
 }
