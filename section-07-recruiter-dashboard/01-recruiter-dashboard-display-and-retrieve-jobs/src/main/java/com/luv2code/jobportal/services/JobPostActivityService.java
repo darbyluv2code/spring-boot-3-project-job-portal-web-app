@@ -16,4 +16,5 @@ public class JobPostActivityService {
     public JobPostActivity addNew(JobPostActivity jobPostActivity) {
         return jobPostActivityRepository.save(jobPostActivity);
     }
+
 }
