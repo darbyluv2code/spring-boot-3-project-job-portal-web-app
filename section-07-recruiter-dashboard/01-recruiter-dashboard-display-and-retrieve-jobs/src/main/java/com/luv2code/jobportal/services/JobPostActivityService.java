@@ -1,9 +1,11 @@
 package com.luv2code.jobportal.services;
 
-import com.luv2code.jobportal.entity.JobPostActivity;
-import com.luv2code.jobportal.entity.RecruiterJobsDto;
+import com.luv2code.jobportal.entity.*;
 import com.luv2code.jobportal.repository.JobPostActivityRepository;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class JobPostActivityService {
@@ -19,6 +21,18 @@ public class JobPostActivityService {
     }
 
     public List<RecruiterJobsDto> getRecruiterJobs(int recruiter) {
+
+        List<IRecruiterJobs> recruiterJobsDtos = jobPostActivityRepository.getRecruiterJobs(recruiter);
+
+        List<RecruiterJobsDto> recruiterJobsDtoList = new ArrayList<>();
+
+        for (IRecruiterJobs rec : recruiterJobsDtos) {
+            JobLocation loc = new JobLocation(rec.getLocationId(), rec.getCity(), rec.getState(), rec.getCountry());
+            JobCompany comp = new JobCompany(rec.getCompanyId(), rec.getName(), "");
+            recruiterJobsDtoList.add(new RecruiterJobsDto(rec.getTotalCandidate(), rec.getJob_post_id(),
+                    rec.getJob_title(), loc, comp));
+        }
+        return recruiterJobsDtoList;
 
     }
 }

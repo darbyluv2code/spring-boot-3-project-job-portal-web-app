@@ -6,7 +6,7 @@ public interface IRecruiterJobs {
 
     int getJob_post_id();
 
-    int getJob_title();
+    String getJob_title();
 
     int getLocationId();
 
