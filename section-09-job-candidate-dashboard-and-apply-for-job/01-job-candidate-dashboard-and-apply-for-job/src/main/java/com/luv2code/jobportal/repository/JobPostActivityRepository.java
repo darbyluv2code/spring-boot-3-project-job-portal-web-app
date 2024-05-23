@@ -20,4 +20,9 @@ public interface JobPostActivityRepository extends JpaRepository<JobPostActivity
             " where j.posted_by_id = :recruiter " +
             " GROUP By j.job_post_id" ,nativeQuery = true)
     List<IRecruiterJobs> getRecruiterJobs(@Param("recruiter") int recruiter);
+
+    List<JobPostActivity> searchWithoutDate(@Param("job") String job,
+                                            @Param("location") String location,
+                                            @Param("remote") List<String> remote,
+                                            @Param("type") List<String> type);
 }
