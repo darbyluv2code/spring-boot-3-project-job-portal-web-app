@@ -26,7 +26,6 @@ public class FileUploadUtil {
         }
         catch (IOException ioe) {
             throw new IOException("Could not save image file: " + filename, ioe);
-
         }
     }
 }
