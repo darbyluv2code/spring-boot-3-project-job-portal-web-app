@@ -29,7 +29,7 @@ public class JobPostActivityService {
         for (IRecruiterJobs rec : recruiterJobsDtos) {
             JobLocation loc = new JobLocation(rec.getLocationId(), rec.getCity(), rec.getState(), rec.getCountry());
             JobCompany comp = new JobCompany(rec.getCompanyId(), rec.getName(), "");
-            recruiterJobsDtoList.add(new RecruiterJobsDto(rec.getTotalCandidate(), rec.getJob_post_id(),
+            recruiterJobsDtoList.add(new RecruiterJobsDto(rec.getTotalCandidates(), rec.getJob_post_id(),
                     rec.getJob_title(), loc, comp));
         }
         return recruiterJobsDtoList;
