@@ -43,8 +43,7 @@ public class JobSeekerSaveController {
             String currentUsername = authentication.getName();
             Users user = usersService.findByEmail(currentUsername);
             Optional<JobSeekerProfile> seekerProfile = jobSeekerProfileService.getOne(user.getUserId());
-            JobPostActivity jobPostActivity = jobPostActivityService.getOne(user.getUserId());
-            // JobPostActivity jobPostActivity = jobPostActivityService.getOne(id);
+            JobPostActivity jobPostActivity = jobPostActivityService.getOne(id);
             if (seekerProfile.isPresent() && jobPostActivity != null) {
                 jobSeekerSave.setJob(jobPostActivity);
                 jobSeekerSave.setUserId(seekerProfile.get());
