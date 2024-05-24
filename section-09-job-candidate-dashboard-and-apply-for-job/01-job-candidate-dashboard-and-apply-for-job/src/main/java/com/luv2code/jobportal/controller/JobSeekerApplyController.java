@@ -43,7 +43,6 @@ public class JobSeekerApplyController {
         JobPostActivity jobDetails = jobPostActivityService.getOne(id);
         List<JobSeekerApply> jobSeekerApplyList = jobSeekerApplyService.getJobCandidates(jobDetails);
         List<JobSeekerSave> jobSeekerSaveList = jobSeekerSaveService.getJobCandidates(jobDetails);
-
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (!(authentication instanceof AnonymousAuthenticationToken)) {
             if (authentication.getAuthorities().contains(new SimpleGrantedAuthority("Recruiter"))) {
@@ -102,5 +101,12 @@ public class JobSeekerApplyController {
 
         return "redirect:/dashboard/";
     }
-
 }
+
+
+
+
+
+
+
+
