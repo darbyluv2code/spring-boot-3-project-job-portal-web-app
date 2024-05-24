@@ -1,0 +1,9 @@
+<script type="text/javascript" th:src="@{/js/main.js}"></script>
+<script>
+    $('#job').change(function() {
+      $('#hidJob').val($(this).val());
+    });
+    $('#loc').change(function() {
+      $('#hidLoc').val($(this).val());
+    });
+</script>

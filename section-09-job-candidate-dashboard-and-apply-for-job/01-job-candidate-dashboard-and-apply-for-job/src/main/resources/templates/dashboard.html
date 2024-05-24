@@ -313,5 +313,16 @@
         type="text/javascript"
         th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"
 ></script>
+
+<script type="text/javascript" th:src="@{/js/main.js}"></script>
+<script>
+    $('#job').change(function() {
+      $('#hidJob').val($(this).val());
+    });
+    $('#loc').change(function() {
+      $('#hidLoc').val($(this).val());
+    });
+</script>
+
 </body>
 </html>
