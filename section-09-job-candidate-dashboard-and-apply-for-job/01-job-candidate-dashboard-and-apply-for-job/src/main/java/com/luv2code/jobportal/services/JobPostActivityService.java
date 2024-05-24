@@ -39,7 +39,7 @@ public class JobPostActivityService {
     }
 
     public JobPostActivity getOne(int id) {
-
+        System.out.println("JobPostActivity: getOne - id=" + id);
         return jobPostActivityRepository.findById(id).orElseThrow(()->new RuntimeException("Job not found"));
     }
 
