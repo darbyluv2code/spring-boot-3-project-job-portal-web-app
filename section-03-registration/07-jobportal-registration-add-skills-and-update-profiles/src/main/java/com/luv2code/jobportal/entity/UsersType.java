@@ -55,7 +55,7 @@ public class UsersType {
         return "UsersType{" +
                 "userTypeId=" + userTypeId +
                 ", userTypeName='" + userTypeName + '\'' +
-                ", users=" + users +
                 '}';
     }
+
 }
