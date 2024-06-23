@@ -90,6 +90,7 @@ public class JobSeekerApplyController {
             Optional<JobSeekerProfile> seekerProfile = jobSeekerProfileService.getOne(user.getUserId());
             JobPostActivity jobPostActivity = jobPostActivityService.getOne(id);
             if (seekerProfile.isPresent() && jobPostActivity != null) {
+                jobSeekerApply = new JobSeekerApply();
                 jobSeekerApply.setUserId(seekerProfile.get());
                 jobSeekerApply.setJob(jobPostActivity);
                 jobSeekerApply.setApplyDate(new Date());
