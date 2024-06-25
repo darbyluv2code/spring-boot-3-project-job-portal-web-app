@@ -11,6 +11,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.header.writers.StaticHeadersWriter;
 
 import javax.swing.*;
 
@@ -57,6 +58,14 @@ public class WebSecurityConfig {
                     logout.logoutSuccessUrl("/");
                 }).cors(Customizer.withDefaults())
                 .csrf(csrf->csrf.disable());
+
+        // Add headers to prevent caching
+        http.headers(headers -> {
+            headers.cacheControl(cache -> cache.disable());
+            headers.addHeaderWriter(new StaticHeadersWriter("Cache-Control", "no-cache, no-store, must-revalidate"));
+            headers.addHeaderWriter(new StaticHeadersWriter("Pragma", "no-cache"));
+            headers.addHeaderWriter(new StaticHeadersWriter("Expires", "0"));
+        });
 
         return http.build();
     }
