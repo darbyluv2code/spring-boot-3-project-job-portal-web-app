@@ -32,6 +32,7 @@ public class UsersController {
         this.usersService = usersService;
     }
 
+
     @GetMapping("/register")
     public String register(Model model) {
         List<UsersType> usersTypes = usersTypeService.getAll();
@@ -51,12 +52,16 @@ public class UsersController {
             return "register";
         }
         usersService.addNew(users);
-        return "dashboard";
+        return "redirect:/dashboard/";
     }
 
     @GetMapping("/login")
     public String login() {
-        return "login";
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        if (auth != null && auth.isAuthenticated() && !(auth instanceof AnonymousAuthenticationToken)) {
+            return "redirect:/dashboard/"; // Redirect to dashboard if already authenticated
+        }
+        return "login"; // Show login page if not authenticated
     }
 
     @GetMapping("/logout")
