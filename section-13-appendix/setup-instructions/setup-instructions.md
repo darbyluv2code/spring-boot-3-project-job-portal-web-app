@@ -6,8 +6,8 @@ To set up and build the job portal web application from the provided source code
 ### Step 1: Required Tools
 
 1. **JDK 17 or Higher**  
-   - Download and install JDK 17 or a higher version from [Oracle JDK](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) or [OpenJDK](https://adoptium.net/temurin/releases/).
-   - Set up your `JAVA_HOME` environment variable to point to the JDK installation.
+   - Download and install JDK 17 or a higher version from [OpenJDK](https://adoptium.net/temurin/releases/).
+   - Set up your `PATH` and `JAVA_HOME` environment variable to point to the JDK installation.
 
    To verify installation, run:
    ```bash
