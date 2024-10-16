@@ -53,7 +53,7 @@ To set up and build the job portal web application from the provided source code
 
 2. **Configure `application.properties`**  
    - In the Spring Boot project, open the `application.properties` file located at `src/main/resources/application.properties`.
-   - Review the default connects. If you used the provided database scripts, then no changes are required. 
+   - Review the default configs. If you used the provided database scripts, then no changes are required. 
    - However, if you changed the users then update the database connection details with your MySQL credentials:
 
      ```properties
