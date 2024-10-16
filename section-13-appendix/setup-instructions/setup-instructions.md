@@ -71,7 +71,7 @@ To set up and build the job portal web application from the provided source code
    - In the root directory of the cloned project, build the application using Maven:
 
      ```bash
-     mvnw clean install
+     mvnw clean compile
      ```
 
 2. **Run the Application**  
@@ -97,6 +97,6 @@ To set up and build the job portal web application from the provided source code
 
 ---
 
-By following these steps, you should be able to build, set up, and run the job portal web application with Java 17, MySQL 8, and the provided source code and SQL scripts.
+By following these steps, you will be able to build, set up, and run the job portal web application with Java 17, MySQL 8, and the provided source code and SQL scripts.
 
-Let me know if you encounter any issues or need further clarification!
+If you have questions or need tech support, post your questions to the [classroom discussion forum](https://www.udemy.com/course/spring-boot-project-job-portal-web-app/learn/v4/questions).
