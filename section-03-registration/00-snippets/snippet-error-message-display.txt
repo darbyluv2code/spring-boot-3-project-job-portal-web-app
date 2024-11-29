@@ -1,0 +1,11 @@
+                    <!-- Error message display -->
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <div th:if="${error}" class="alert alert-danger" role="alert">
+                            <p th:text="${error}"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End error message display -->
