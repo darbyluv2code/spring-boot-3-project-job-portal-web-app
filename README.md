@@ -1,6 +1,6 @@
-# Spring Boot Project - Build a Job Portal Web Application
+# Spring Boot 4 Project - Build a Job Portal Web Application
 
-Source code for the course: [Spring Boot Project - Build a Job Portal Web Application](http://www.luv2code.com/spring-boot-3-project-job-portal-web-app-github)
+Source code for the course: [Spring Boot 4 Project - Build a Job Portal Web Application](http://www.luv2code.com/spring-boot-3-project-job-portal-web-app-github)
 
 If you have questions or need tech support, post your questions to the [classroom discussion forum](https://www.udemy.com/course/spring-boot-project-job-portal-web-app/learn/v4/questions).
 
@@ -25,7 +25,7 @@ I'd recommend the following road map:
 
 ### Project Course: Spring Boot, Spring MVC and Thymeleaf
 For end-to-end project with Spring Boot, Spring MVC and Thymeleaf:
-1. [Spring Boot Project - Build a Job Portal Web Application](https://www.udemy.com/course/spring-boot-project-job-portal-web-app/?referralCode=BB9301596150194B61E2)
+1. [Spring Boot 4 Project - Build a Job Portal Web Application](https://www.udemy.com/course/spring-boot-project-job-portal-web-app/?referralCode=BB9301596150194B61E2)
 
 ### REST API Project Course: Spring Boot REST APIs
 This is an intermediate level course that includes four REST API projects:
